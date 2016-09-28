@@ -1,14 +1,4 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+* {
   padding:0;
   margin:0;
   font-family: "Roboto", sans-serif;
@@ -26,7 +16,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #989;
   line-height: 48px;
   display: inline;
 }
@@ -86,6 +76,7 @@ p {
 }
 
 a {
+  font-size: 16px;
   color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
@@ -100,16 +91,12 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #989;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
+  background-color: #000;
 }
 
 .white-text {
@@ -129,7 +116,8 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #000;
+  color: #989;
 }
 
 .flex-box {
@@ -139,6 +127,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+  color: #989;
 }
 
 .flex-column {

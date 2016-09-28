@@ -113,9 +113,9 @@ var education = {
     }],
     "onlineCourses": [{
         "title": "Java for Android",
-        "school": "Udemy",
+        "school": "UCLA",
         "dates": "2010 - 2011",
-        "url": "http://www.udemy.com"
+        "url": "http://www.ucla.com"
     }, {
         "title": "Nodejs",
         "school": "Udemy",
@@ -127,7 +127,7 @@ var education = {
             $("#education").append(HTMLschoolStart);
             for (var i = 0; i < education.schools.length; i++) {
                 var formattedSchool = HTMLschoolName.replace("%data%", education.schools[i].name) + " " + HTMLschoolDegree.replace("%data%", education.schools[i].degree);
-                $(".education-entry").append(formattedSchool);
+                $(".education-entry").append(formattedSchool.replace("#", education.schools[i].url));
                 var formattedEduCity = HTMLschoolLocation.replace("%data%", education.schools[i].location);
                 $(".education-entry").append(formattedEduCity);
                 var formattedEduYears = HTMLschoolDates.replace("%data%", education.schools[i].dates);
@@ -140,11 +140,11 @@ var education = {
             $("#education").append(HTMLonlineClasses);
             for (var x = 0; x < education.onlineCourses.length; x++) {
                 var formattedonline = HTMLonlineTitle.replace("%data%", education.onlineCourses[x].title) + " " + HTMLonlineSchool.replace("%data%", education.onlineCourses[x].school);
-                $("#education").find("h3").append(formattedonline);
+                $("#education").find("h3").append(formattedonline.replace("#", education.onlineCourses[x].url));
                 var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[x].dates);
                 $("#education").find("h3").append(formattedonlineDates);
                 var formattedonlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[x].url);
-                $("#education").find("h3").append(formattedonlineUrl);
+                $("#education").find("h3").append(formattedonlineUrl.replace("#", education.onlineCourses[x].url));
 
             }
         }
